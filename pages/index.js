@@ -17,8 +17,7 @@ export default function HomePage() {
 
   // random spotlight image:
 
-  const spotlightImage =
-    artData[Math.floor(Math.random() * (artData.length - 1))];
+  const spotlightImage = artData[Math.floor(Math.random() * artData.length)];
   console.log(spotlightImage);
 
   return (

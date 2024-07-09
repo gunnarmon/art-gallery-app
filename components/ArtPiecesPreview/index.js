@@ -10,7 +10,13 @@ export default function ArtPiecePreview({ title, image, artist, slug }) {
       <h4>
         <strong>Artist:</strong> {artist}
       </h4>
-      <Image src={image} height={300} width={200} alt={slug}></Image>
+      <Image
+        src={image}
+        height={0}
+        width={360}
+        style={{ width: "auto", height: "auto" }}
+        alt={slug}
+      ></Image>
     </>
   );
 }

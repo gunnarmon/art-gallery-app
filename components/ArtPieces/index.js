@@ -9,7 +9,6 @@ export default function ArtPieces({ pieces }) {
           <ArtPiecesPreview
             title={piece.name}
             artist={piece.artist}
-            slug={piece.slug}
             image={piece.imageSource}
           />
         </li>

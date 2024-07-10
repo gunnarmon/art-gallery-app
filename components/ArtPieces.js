@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArtPiecesPreview from "../ArtPiecesPreview";
+import ArtPiecePreview from "./ArtPiecePreview";
 import Link from "next/link";
 
 export default function ArtPieces({ pieces }) {
@@ -8,7 +8,7 @@ export default function ArtPieces({ pieces }) {
       {pieces.map((piece) => (
         <li key={piece.slug}>
           <Link href={`/art-pieces/${piece.slug}`}>
-            <ArtPiecesPreview
+            <ArtPiecePreview
               title={piece.name}
               artist={piece.artist}
               slug={piece.slug}

@@ -5,7 +5,7 @@ export default function Navigation() {
   return (
     <>
       <hr></hr>
-      <nav>
+      <StyledNav>
         <StyledList>
           <li>
             <StyledLink href={"/"}>| Spotlight |</StyledLink>
@@ -17,10 +17,20 @@ export default function Navigation() {
             <StyledLink href={"/favorites"}>| Favorites |</StyledLink>
           </li>
         </StyledList>
-      </nav>
+      </StyledNav>
     </>
   );
 }
+
+const StyledNav = styled.nav`
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: lightgray;
+`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;

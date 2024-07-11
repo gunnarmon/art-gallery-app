@@ -10,17 +10,17 @@ export default function ArtPieceDetails({
 }) {
   return (
     <>
-      <Wrapper>
+      <Figure>
+        <FavoriteButton
+          onToggleFavorite={onToggleFavorite}
+          isFavorite={isFavorite}
+        />
         <Image
           src={piece.imageSource}
           height={0}
           width={360}
           style={{ width: "auto", height: "auto" }}
           alt={piece.name}
-        />
-        <FavoriteButton
-          onToggleFavorite={onToggleFavorite}
-          isFavorite={isFavorite}
         />
         <h3>Title: {piece.name}</h3>
         <h4>Artist: {piece.artist}</h4>
@@ -29,14 +29,22 @@ export default function ArtPieceDetails({
         <Link href="/art-pieces">
           <BackButton> ← back</BackButton>
         </Link>
-      </Wrapper>
+      </Figure>
     </>
   );
 }
 
-const Wrapper = styled.div`
-  margin-top: 2rem;
+const Figure = styled.figure`
+  border: 1px solid slategray;
+  padding: 1rem;
+  position: relative;
 `;
+
+/* const StyledButton = styled(FavoriteButton)`
+  position: absolute;
+  top: 17.5rem;
+  right: 1.4rem;
+`; */
 
 const BackButton = styled.button`
   padding: 1rem 2rem;

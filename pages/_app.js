@@ -33,11 +33,10 @@ export default function App({ Component, pageProps }) {
     }
   }
 
-  // random spotlight image:
-
   if (error) return <p>failed to load</p>;
   if (isLoading) return <p>loading...</p>;
 
+  // random spotlight image:
   const spotlightImage = artData[Math.floor(Math.random() * artData.length)];
   return (
     <>
@@ -45,8 +44,8 @@ export default function App({ Component, pageProps }) {
         <GlobalStyle />
         <Component
           pieces={artData}
-          artPiecesInfo={artPiecesInfo}
           spotlightImage={spotlightImage}
+          artPiecesInfo={artPiecesInfo}
           onToggleFavorite={handleToggleFavorite}
           {...pageProps}
         />

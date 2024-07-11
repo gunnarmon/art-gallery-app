@@ -5,6 +5,7 @@ export default function ArtPiecesList({
   pieces,
   artPiecesInfo,
   onToggleFavorite,
+  isFavorite,
 }) {
   return (
     <>
@@ -15,6 +16,7 @@ export default function ArtPiecesList({
         pieces={pieces}
         artPiecesInfo={artPiecesInfo}
         onToggleFavorite={onToggleFavorite}
+        isFavorite={isFavorite}
       ></ArtPieces>
     </>
   );
